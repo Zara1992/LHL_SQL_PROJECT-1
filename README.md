@@ -4,8 +4,10 @@
 (fill in your description and goals here)
 
 ## Process
-### (your step 1)
-### (your step 2)
+Created a data model (relational data model)
+Wrote SQL query to CREATE TABLES as per the data files (QUERY TOOL)
+Wrote SQL query to INSERT data into the tables using file path (PSQL Tool)
+
 
 ## Results
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
