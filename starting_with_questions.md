@@ -109,11 +109,98 @@ Answer:
 **Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
 
 
-SQL Queries:
+SQL Queries:COUNTRY
+SELECT country, v2productcategory, SUM(productquantity) FROM all_sessions
+WHERE productquantity is not null
+GROUP By country, v2productcategory;
 
 
+Answer:COUNTY
+"country","v2productcategory","sum"
+"Argentina","Home/Bags/Backpacks/",1
+"Canada","${escCatTitle}",1
+"Canada","Home/Apparel/Kid's/Kids-Youth/",1
+"Canada","Home/Shop by Brand/YouTube/",1
+"Colombia","Home/Apparel/Men's/Men's-T-Shirts/",1
+"Finland","${escCatTitle}",1
+"France","Headgear",1
+"India","Apparel",1
+"Ireland","Home/Bags/",1
+"Mexico","(not set)",1
+"Spain","${escCatTitle}",10
+"United States","${escCatTitle}",8
+"United States","(not set)",10
+"United States","Apparel",1
+"United States","Bags",54
+"United States","Drinkware",1
+"United States","Electronics",2
+"United States","Home/Apparel/Headgear/",1
+"United States","Home/Apparel/Men's/",2
+"United States","Home/Apparel/Men's/Men's-Outerwear/",1
+"United States","Home/Apparel/Men's/Men's-T-Shirts/",2
+"United States","Home/Apparel/Women's/Women's-Outerwear/",1
+"United States","Home/Nest/Nest-USA/",13
+"United States","Home/Office/Notebooks & Journals/",65
+"United States","Home/Shop by Brand/YouTube/",2
+"United States","Lifestyle",1
+"United States","Nest-USA",4
+"United States","Office",1
 
-Answer:
+
+SQL QUERIES: CITY
+SELECT city, v2productcategory, SUM(productquantity) FROM all_sessions
+WHERE productquantity is not null
+GROUP By city, v2productcategory;
+
+Answer: CITY
+"city","v2productcategory","sum"
+"(not set)","${escCatTitle}",1
+"Ann Arbor","Home/Apparel/Men's/Men's-T-Shirts/",1
+"Atlanta","Bags",4
+"Bengaluru","Apparel",1
+"Chicago","Lifestyle",1
+"Columbus","(not set)",1
+"Dallas","Home/Shop by Brand/YouTube/",1
+"Detroit","Drinkware",1
+"Dublin","Home/Bags/",1
+"Houston","${escCatTitle}",2
+"Los Angeles","Home/Apparel/Men's/Men's-Outerwear/",1
+"Madrid","${escCatTitle}",10
+"Mountain View","${escCatTitle}",1
+"Mountain View","Apparel",1
+"Mountain View","Home/Apparel/Women's/Women's-Outerwear/",1
+"Mountain View","Home/Nest/Nest-USA/",3
+"Mountain View","Nest-USA",1
+"New York","${escCatTitle}",1
+"New York","(not set)",1
+"New York","Home/Apparel/Men's/",1
+"New York","Home/Apparel/Men's/Men's-T-Shirts/",1
+"New York","Home/Nest/Nest-USA/",2
+"New York","Home/Shop by Brand/YouTube/",1
+"not available in demo dataset","${escCatTitle}",5
+"not available in demo dataset","(not set)",1
+"not available in demo dataset","Bags",50
+"not available in demo dataset","Electronics",2
+"not available in demo dataset","Headgear",1
+"not available in demo dataset","Home/Apparel/Headgear/",1
+"not available in demo dataset","Home/Apparel/Kid's/Kids-Youth/",1
+"not available in demo dataset","Home/Apparel/Men's/",1
+"not available in demo dataset","Home/Apparel/Men's/Men's-T-Shirts/",1
+"not available in demo dataset","Home/Bags/Backpacks/",1
+"not available in demo dataset","Home/Nest/Nest-USA/",3
+"not available in demo dataset","Home/Office/Notebooks & Journals/",65
+"not available in demo dataset","Home/Shop by Brand/YouTube/",1
+"not available in demo dataset","Nest-USA",1
+"not available in demo dataset","Office",1
+"Palo Alto","Home/Nest/Nest-USA/",1
+"Salem","(not set)",8
+"San Francisco","Home/Nest/Nest-USA/",1
+"San Francisco","Nest-USA",1
+"San Jose","Home/Nest/Nest-USA/",1
+"Seattle","Home/Nest/Nest-USA/",1
+"Sunnyvale","Home/Nest/Nest-USA/",1
+"Sunnyvale","Nest-USA",1
+
 
 
 
