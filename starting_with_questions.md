@@ -4,49 +4,33 @@ Answer the following questions and provide the SQL queries used to find the answ
 **Question 1: Which cities and countries have the highest level of transaction revenues on the site?**
 
 
-SQL Queries: select country, MAX(totaltransactionrevenue) as highest_transaction_revenue from all_sessions
+SELECT country,city, MAX (totaltransactionrevenue) AS highest_transaction_revenue FROM all_sessions
 WHERE totaltransactionrevenue is NOT NULL
-GROUP BY country
-ORDER BY country
+GROUP BY country,city
+ORDER BY highest_transaction_revenue DESC
 
-
-
-Answer:
-"country","highest_transaction_revenue"
-"Australia",358000000
-"Canada",82160000
-"Israel",602000000
-"Switzerland",16990000
-"United States",1015480000
-
-SQL Queries: SELECT city, country, MAX(totaltransactionrevenue) AS highest_transaction_revenue FROM all_sessions
-WHERE totaltransactionrevenue is NOT NULL
-GROUP BY city, country
-ORDER BY city, country
-
-Answer:
-"city","country","highest_transaction_revenue"
-"Atlanta","United States",742480000
-"Austin","United States",122000000
-"Chicago","United States",306000000
-"Columbus","United States",21990000
-"Houston","United States",38980000
-"Los Angeles","United States",363000000
-"Mountain View","United States",156000000
-"Nashville","United States",157000000
-"New York","Canada",67990000
-"New York","United States",152000000
-"not available in demo dataset","United States",1015480000
-"Palo Alto","United States",305000000
-"San Bruno","United States",103770000
-"San Francisco","United States",301000000
-"San Jose","United States",154000000
-"Seattle","United States",358000000
-"Sunnyvale","United States",649240000
-"Sydney","Australia",358000000
-"Tel Aviv-Yafo","Israel",602000000
-"Toronto","Canada",82160000
-"Zurich","Switzerland",16990000
+"country","city","highest_transaction_revenue"
+"United States","not available in demo dataset",1015480000
+"United States","Atlanta",742480000
+"United States","Sunnyvale",649240000
+"Israel","Tel Aviv-Yafo",602000000
+"United States","Los Angeles",363000000
+"United States","Seattle",358000000
+"Australia","Sydney",358000000
+"United States","Chicago",306000000
+"United States","Palo Alto",305000000
+"United States","San Francisco",301000000
+"United States","Nashville",157000000
+"United States","Mountain View",156000000
+"United States","San Jose",154000000
+"United States","New York",152000000
+"United States","Austin",122000000
+"United States","San Bruno",103770000
+"Canada","Toronto",82160000
+"Canada","New York",67990000
+"United States","Houston",38980000
+"United States","Columbus",21990000
+"Switzerland","Zurich",16990000
 
 
 **Question 2: What is the average number of products ordered from visitors in each city and country?**
