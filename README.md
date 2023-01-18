@@ -54,7 +54,17 @@ Abswer: United States with Mountain View City is again the dominant market with 
 
 
 ## Challenges 
-(discuss challenges you faced in the project)
+Understanding the data model and the dependencies of columns across multiple tables.
+Determining the data types to create and insert data.  
+No clear relationship between transaction revenue, quantity, price – This made it difficult to explore the data in monetary term. 
 
 ## Future Goals
-(what would you do if you had more time?)
+The below mentioned relationship between columns within each table can be explored further to identidy a proper sales and marketing process for the ecommerce store. 
+Total Transactions and Transaction revenue
+Total Transactions based on Channel Grouping, Time on site & Page views
+Most costly item being sold on the website, explored by product price 
+Website performance by Page views, and bounces by channel group
+Identify the most frequented visitor by page view and bounce count. Target the top visitors and identify pattern. 
+Identify the channel from which most visitors bounce on the website. 
+Top 10 products by order_quantity 
+Products with the lowest restock time/ or the highest
