@@ -209,6 +209,7 @@ SQL Queries:
 COUNTRY & CITY
 SELECT AL.COUNTRY, AL.CITY, SR. productsku, SR.name, SUM (SR.total_ordered) as Total_Ordered from sales_report as SR
 INNER JOIN ALL_SESSIONS AL ON SR.PRODUCTSKU = AL.PRODUCTSKU
+Where city NOT LIKE 'not available in demo dataset' and city not like '(not set)'
 GROUP BY SR. productsku, SR.name, AL.COUNTRY,  AL.CITY
 ORDER BY Total_Ordered desc
 LIMIT 100
