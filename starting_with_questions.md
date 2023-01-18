@@ -323,7 +323,7 @@ LIMIT 100
 **Question 5: Can we summarize the impact of revenue generated from each city/country?**
 
 SQL Queries:
-
+Not sure what to write as a query as I believe this question is same as question 1.
 
 
 Answer:
