@@ -60,7 +60,6 @@ No clear relationship between transaction revenue, quantity, price – This made
 
 ## Future Goals
 The below mentioned relationship between columns within each table can be explored further to identidy a proper sales and marketing process for the ecommerce store. 
-Total Transactions and Transaction revenue
 Total Transactions based on Channel Grouping, Time on site & Page views
 Most costly item being sold on the website, explored by product price 
 Website performance by Page views, and bounces by channel group
