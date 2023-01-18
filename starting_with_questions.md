@@ -36,56 +36,39 @@ ORDER BY highest_transaction_revenue DESC
 **Question 2: What is the average number of products ordered from visitors in each city and country?**
 
 
-SQL Queries: Country
-SELECT  country, Round(AVG(productquantity),2) AS average_products_ordered from all_sessions
+SELECT  country, city ,Round(AVG(productquantity),2) AS average_products_ordered FROM all_sessions
 WHERE productquantity is not null
-GROUP BY country
+GROUP BY country, city
+ORDER BY average_products_ordered desc
 
-
-
-Answer:
-"country","average_products_ordered"
-"Argentina",1.0
-"Canada",1.0
-"Colombia",1.0
-"Finland",1.0
-"France",1.0
-"India",1.0
-"Ireland",1.0
-"Mexico",1.0
-"Spain",10.0
-"United States",4.02
-
-
-SQL Queries: City
-SELECT  city, Round(AVG(productquantity),2) AS average_products_ordered from all_sessions
-WHERE productquantity is not null
-GROUP BY city
-
-
-Answer:
-"city","average_products_ordered"
-"(not set)",1.0
-"Ann Arbor",1.0
-"Atlanta",4.0
-"Bengaluru",1.0
-"Chicago",1.0
-"Columbus",1.0
-"Dallas",1.0
-"Detroit",1.0
-"Dublin",1.0
-"Houston",2.0
-"Los Angeles",1.0
-"Madrid",10.0
-"Mountain View",1.0
-"New York",1.17
-"not available in demo dataset",6.75
-"Palo Alto",1.0
-"Salem",8.0
-"San Francisco",1.0
-"San Jose",1.0
-"Seattle",1.0
-"Sunnyvale",1.0
+"country","city","average_products_ordered"
+"United States","not available in demo dataset",10.58
+"Spain","Madrid",10.00
+"United States","Salem",8.00
+"United States","Atlanta",4.00
+"United States","Houston",2.00
+"United States","New York",1.17
+"Ireland","Dublin",1.00
+"Mexico","not available in demo dataset",1.00
+"United States","(not set)",1.00
+"United States","Ann Arbor",1.00
+"United States","Chicago",1.00
+"United States","Columbus",1.00
+"United States","Dallas",1.00
+"United States","Detroit",1.00
+"United States","Los Angeles",1.00
+"United States","Mountain View",1.00
+"United States","Palo Alto",1.00
+"United States","San Francisco",1.00
+"United States","San Jose",1.00
+"United States","Seattle",1.00
+"Argentina","not available in demo dataset",1.00
+"United States","Sunnyvale",1.00
+"Canada","not available in demo dataset",1.00
+"Colombia","not available in demo dataset",1.00
+"Finland","not available in demo dataset",1.00
+"France","not available in demo dataset",1.00
+"India","Bengaluru",1.00
 
 
 
